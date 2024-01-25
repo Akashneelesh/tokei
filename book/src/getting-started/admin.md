@@ -1,10 +1,11 @@
 # StarkNet Admin Interaction Script
 
-## Overview
+## 🔍 Overview
 
 The Tokei Lockup Linear Contract on StarkNet facilitates the creation and management of time-bound asset streams. This guide delves into the functionalities, fee structures, and key contract components like `Durations`, `Range`, `Broker`, and `LockupLinearStream`.
+The Tokei Lockup Linear Contract offers a comprehensive solution for asset distribution on StarkNet. Its sophisticated structures enable precise control over asset streaming, making it an essential tool for DeFi applications. A deep understanding of its fee calculations and time-bound mechanisms is key for effective implementation.
 
-## Core Functionalities
+## 💪 Core Functionalities
 
 ### Stream Creation and Management
 
@@ -21,7 +22,7 @@ The Tokei Lockup Linear Contract on StarkNet facilitates the creation and manage
 
 - Representation of each asset stream as an NFT for ease of tracking and transferability.
 
-## Key Structures and Functions
+## 🔑 Key Structures and Functions
 
 ### Fee Calculation (`check_and_calculate_fees`)
 
@@ -55,23 +56,19 @@ The Tokei Lockup Linear Contract on StarkNet facilitates the creation and manage
 - Ensures timing integrity and deposit amount of the stream.
 - Checks for valid timing sequence and that current time precedes the end time.
 
-## Conclusion for Developers
-
-The Tokei Lockup Linear Contract offers a comprehensive solution for asset distribution on StarkNet. Its sophisticated structures enable precise control over asset streaming, making it an essential tool for DeFi applications. A deep understanding of its fee calculations and time-bound mechanisms is key for effective implementation.
-
 ## Features
 - Setting and retrieving protocol fees
 - Claiming protocol revenues
 - Viewing administrative details
 - Dynamic interaction with smart contracts
 
-## Prerequisites
+## 🏗️ Prerequisites
 Before running this script, ensure you have the following installed:
 - Node.js and npm
 - StarkNet libraries and ethers.js
 - TypeScript and ts-node
 
-## Installation
+## ⚙️ Installation
 To set up the script on your local machine, follow these steps:
 1. Clone the GitHub repository:
 2. Navigate to the repository directory and install the required dependencies:
@@ -80,7 +77,12 @@ To set up the script on your local machine, follow these steps:
 npm install or yarn
 ```
 
-## Usage
+## 🛠️ Build the contracts
+```bash
+scarb build
+```
+
+## 🤺 Usage
 To execute the script, run the following command in the root directory of the project:
 ```bash
 npx ts-node src/scripts/admin_interaction.ts
@@ -102,7 +104,7 @@ The script offers various functionalities, categorized into "view" and "write" o
 - `set_protocol_fee`
 - `claim_protocol_revenues`
 
-## Setting Protocol Fees**
+## 💰Setting Protocol Fees
 
 As an administrator, you can adjust the protocol fees charged by Tokei. Here's how to set the protocol fee using the **`set_protocol_fee`** 
 - Enter the function name in this case : set_protocol_fee
