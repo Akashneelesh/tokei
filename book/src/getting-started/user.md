@@ -1,12 +1,12 @@
 # User Interaction CLI Tool
 
-## Overview
+## 🔍 Overview
 This command-line interface (CLI) tool is designed for interacting with a streaming contract. It provides an easy-to-use interface to execute various functions related to asset streaming, such as creating streams, withdrawing funds, and querying stream details.
 
 The Tokei Lockup Linear Contract is part of the Tokei protocol, designed to manage financial streams over time. This contract is particularly relevant for users interested in creating, managing, and interacting with asset streams. Key functionalities include:
 Detailed Functionalities:
 __________________________________________________________________________________________________________________________________________________________________
-### Stream Creation:
+### 🏄 Stream Creation:
 
 Users can initiate asset streams with precise timing. The contract allows specification of start, cliff, and end times, controlling the asset flow.
 <br>
@@ -14,20 +14,20 @@ Durations Structure: This struct includes two key time periods - the cliff durat
 <br>
 Range Structure: Defines the specific timing of the stream with start, cliff, and end timestamps. This granularity offers users flexibility in how they schedule their asset distribution.
 __________________________________________________________________________________________________________________________________________________________________
-## Asset Management:
+## 💰Asset Management:
 ### Cancelable Streams:
 Users have the option to cancel streams, providing flexibility and control over their asset distribution.
 __________________________________________________________________________________________________________________________________________________________________
 
-### Transferable Rights:
+### 🚙 Transferable Rights:
 Streams can be made transferable, allowing users to assign their streaming rights to others, adding an element of liquidity to their assets.
 __________________________________________________________________________________________________________________________________________________________________
 
-### Withdrawals:
+### 🏧 Withdrawals:
 Assets can be withdrawn as per the defined schedule, offering users timely access to their funds.
 __________________________________________________________________________________________________________________________________________________________________
 
-### Fee and NFT Integration:
+### 🎨 Fee and NFT Integration:
 The contract entails fees like protocol fees and broker fees, calculated as percentages of the total stream amount.
 Each stream is uniquely represented as an NFT, providing a tangible asset that can be held, transferred, or traded.
 __________________________________________________________________________________________________________________________________________________________________
@@ -42,13 +42,13 @@ The entire length of the asset stream, from start to finish.
 #### Range: 
 This structure provides a more detailed breakdown of the stream's timeline, with specific timestamps marking the start, cliff, and end of the asset distribution.
 __________________________________________________________________________________________________________________________________________________________________
-## Prerequisites
+## 📝 Prerequisites
 Before running this tool, ensure you have the following prerequisites installed:
 - Node.js
 - TypeScript
 - ts-node
 
-## Installation
+## ⚙️ Installation
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Install the dependencies using npm:
@@ -57,14 +57,14 @@ Before running this tool, ensure you have the following prerequisites installed:
 npm install or yarn
 ```
 
-## Usage
+## 🔬 Usage
 To start the CLI tool, run the following command in the terminal:
 
 ```bash
 npx ts-node src/scripts/user_interaction.ts
 ```
 
-### Interactive CLI
+### 🤺 Interactive CLI
 Once the script is running, you will be presented with an interactive CLI. The CLI offers a range of 'view' and 'external' functions that you can call and invoke. 
 
 ### Executing Functions
@@ -93,7 +93,7 @@ These functions allow you to perform actions like creating or canceling streams.
 - `withdraw_max`
 - ...and more
 
-### Example Workflow of invoking a write function
+### 🏄 Example Workflow of invoking a write function
 1. Choose a function, e.g., `create_with_duration`.
 2. Provide the required parameters like sender, recipient, amount, asset, etc.
 3. The function will be executed, and the transaction hash or relevant information will be displayed.
