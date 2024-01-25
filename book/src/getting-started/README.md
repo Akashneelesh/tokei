@@ -16,8 +16,8 @@ Before you begin, make sure you have the following prerequisites installed:
 - Starknet.js
 - Node.js (for User and Admin scripts)
 - TypeScript
-- ts-node
-- 
+
+  
 
 More details: [Starknet Foundry](https://foundry-rs.github.io/starknet-foundry/)
 
