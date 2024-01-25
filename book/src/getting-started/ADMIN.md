@@ -1,7 +1,63 @@
 # StarkNet Admin Interaction Script
 
 ## Overview
-This TypeScript script facilitates interaction with StarkNet smart contracts. It provides a Command Line Interface (CLI) for executing a variety of administrative functions such as setting fees, claiming revenues, and viewing contract-related information. The script employs StarkNet.js for efficient blockchain interactions.
+
+The Tokei Lockup Linear Contract on StarkNet facilitates the creation and management of time-bound asset streams. This guide delves into the functionalities, fee structures, and key contract components like `Durations`, `Range`, `Broker`, and `LockupLinearStream`.
+
+## Core Functionalities
+
+### Stream Creation and Management
+
+- Create asset streams with specific timings using the `Range` structure.
+- Support for cancelable and transferable streams.
+- Functions for withdrawing assets according to the stream schedule.
+
+### Fee Handling
+
+- Management of protocol and broker fees based on the total stream amount.
+- Limitations to prevent excessive fee charges.
+
+### NFT Integration
+
+- Representation of each asset stream as an NFT for ease of tracking and transferability.
+
+## Key Structures and Functions
+
+### Fee Calculation (`check_and_calculate_fees`)
+
+- **Inputs**: Total stream amount, protocol fee percentage, broker fee percentage, max fee limit.
+- **Outputs**: Calculated deposit, protocol fee, and broker fee in `CreateAmounts` struct.
+- **Process**:
+  - Validation of protocol and broker fees against the maximum fee limit.
+  - Calculation of absolute fee amounts.
+  - Verification that total amount covers both fees, with remainder as the deposit amount.
+
+### PercentageMath Trait
+
+- Utilized for calculating fee percentages as a proportion of the total amount.
+
+### Scaled Division (`scaled_down_div`)
+
+- Function for dividing with scaling, used in time-related calculations.
+
+### Range and Durations
+
+- **Range**: Defines timestamps for the start, cliff, and end of an asset stream.
+- **Durations**: Represents cliff and total duration in time units.
+
+### LockupLinearStream Structure
+
+- Represents an asset stream, including financial tracking through `LockupAmounts`.
+- **LockupAmounts**: Encapsulates deposited, withdrawn, and refunded amounts.
+
+### Validation Checks (`check_create_with_range`)
+
+- Ensures timing integrity and deposit amount of the stream.
+- Checks for valid timing sequence and that current time precedes the end time.
+
+## Conclusion for Developers
+
+The Tokei Lockup Linear Contract offers a comprehensive solution for asset distribution on StarkNet. Its sophisticated structures enable precise control over asset streaming, making it an essential tool for DeFi applications. A deep understanding of its fee calculations and time-bound mechanisms is key for effective implementation.
 
 ## Features
 - Setting and retrieving protocol fees
